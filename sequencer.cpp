@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
 		filename = argv[1];
 	} else {
 		cout << "Usage: " << argv[0] << " <input file>" << endl;
-		exit(1);
+		return 1;
 	} 
 
 	ifstream input(argv[1]);
@@ -119,7 +119,7 @@ int main(int argc, char *argv[])
 		}
 	} else {
 		cerr << "Couldn't open file: " << filename << endl;
-		exit(1);
+		return 1;
 	}
 
 	input.close();
